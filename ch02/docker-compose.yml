@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+        tensorflow:
+                build: .
+                image: ch02:latest
+                stdin_open: true # docker run -i
+                tty: true        # docker run -t 
+                command: 
+                       - --gpu

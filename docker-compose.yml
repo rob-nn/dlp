@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+        tensorflow:
+                build: .
+                image: tensorflow:latest
+                stdin_open: true # docker run -i
+                tty: true        # docker run -t 
