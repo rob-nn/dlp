@@ -5,3 +5,7 @@ services:
                 image: tensorflow:latest
                 stdin_open: true # docker run -i
                 tty: true        # docker run -t 
+                ports:
+                        - "8888:8888"
+                volumes:
+                        - "./:/projects/dlp"

@@ -1,6 +1,9 @@
 FROM tensorflow/tensorflow:2.2.0-gpu
 
-COPY download_datasets.py /app/
-RUN python /app/download_datasets.py
+EXPOSE 8888
 
-CMD [ "/bin/bash" ]
+RUN pip install jupyter
+
+WORKDIR	/projects/dlp
+
+CMD jupyter-notebook --allow-root --ip 0.0.0.0
